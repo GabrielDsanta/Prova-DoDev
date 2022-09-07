@@ -5,14 +5,12 @@ if(value < 0){
     alert("Esse valor não é valido")
 }
 
-console.log(RetornarValue(value))
+console.log(SumOfValues(value))
 
-function RetornarValue(value){
-    if(value % 2 == 0){
-        return true
+function SumOfValues(value){
+    let total = 1
+    for(let index = 1; index < value; index++){
+        total = total + (index + 1)
     }
-
-    else{
-        return false
-    }
+    return total
 }
