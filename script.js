@@ -1,16 +1,16 @@
 
 
-let value = prompt("Digite um valor inteiro e positivo")
-if(value < 0){
-    alert("Esse valor não é valido")
-}
+let A = prompt("Digite o primeiro valor")
+let B = prompt("Digite o segundo valor")
 
-console.log(SumOfValues(value))
+console.log(retornarValue(A, B))
 
-function SumOfValues(value){
-    let total = 1
-    for(let index = 1; index < value; index++){
-        total = total + (index + 1)
+function retornarValue(a, b){
+    if(a % 2 == 0 && b > 5){
+        return true
     }
-    return total
+
+    else{
+        return false
+    }
 }
