@@ -1,74 +1,25 @@
 
 
 let Array1 = []
+let Array2 = []
+let Array3 = []
 
-Array1[0] = parseInt(prompt("Digite um valor"))
-Array1[1] = parseInt(prompt("Digite um valor"))
-Array1[2] = parseInt(prompt("Digite um valor"))
+for(let index = 0; index < 10; index ++){
+    Array1[index] = prompt(`Digite o valor de numero ${index}`)
+}
 
-let A = Array1[0]
-let B = Array1[1]
-let C = Array1[2]
+let LimiteInferior = prompt(`Defina um limite inferior`)
+let LimiteSuperior = prompt(`Defina um limite superior`)
 
-console.log(retornarArray(A, B, C))
+console.log(Exibir(LimiteInferior, LimiteSuperior))
 
-function retornarArray(a, b, c){
-            if(a > b){
-                if(c > a){
-                    if(c > b){
-                        Array1[0] = b
-                        Array1[1] = a
-                        Array1[2] = c
-                    }
-                }
-                
-                else if(c < a){
-                    if(c > b){
-                        Array1[0] = b
-                        Array1[1] = c
-                        Array1[2] = a
-                    }
-        
-                }
-            }
-
-            if(b > c){
-                if(a > c){
-                    if(b > a){
-                        Array1[0] = c
-                        Array1[1] = a
-                        Array1[2] = b
-                    }
-                }
-                
-                else if(a < c){
-                    if(b > a){
-                        Array1[0] = a
-                        Array1[1] = c
-                        Array1[2] = b
-                    }
-        
-                }
-            }
-
-            if(c > a){
-                if(c > b){
-                    if(b > a){
-                        Array1[0] = a
-                        Array1[1] = b
-                        Array1[2] = c
-                    }
-                }
-                
-                else if(c < b){
-                    if(b > a){
-                        Array1[0] = a
-                        Array1[1] = c
-                        Array1[2] = b
-                    }
-        
-                }
-            }
-            
-    return Array1
+function Exibir(LimiteInferior, LimiteSuperior){
+    let contador = 0
+    for(let index2 = 0; index2 < Array1.length; index2++){
+        if(Array1[index2] >= LimiteInferior && Array1[index2] <= LimiteSuperior){
+            Array2[contador] = Array1[index2]
+            contador++
+        }
+    }
+    return Array2
 }
